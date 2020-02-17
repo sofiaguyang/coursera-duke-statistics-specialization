@@ -18,10 +18,6 @@ library(dplyr)
 
 ### Load data
 
-Make sure your data and R Markdown files are in the same directory. When loaded
-your data file will be called `brfss2013`. Delete this note when before you submit
-your work.
-
 ```{r load-data}
 load("brfss2013.RData")
 ```
@@ -31,7 +27,22 @@ load("brfss2013.RData")
 * * *
 
 ## Part 1: Data
+The Behavioral Risk Factor Surveillance System (BRFSS) is an annual survey in the US with the goal of collecting uniform, state-specific data to measure behavioral risk factors related to health. In this particular exploratory data analysis, we are using the 2013 BRFSS survey which covers the non-institutionalized adult population (18 years of age and older) of:
 
+- All 50 states in the US, the District of Columbia, Puerto Rico, and Guam over an annual period
+- American Samoa, Federated States of Micronesia, and Palau over a limited point in time of usually 1 to 3 months
+
+BRFSS 2013 was conducted over telephone and cellphone. The telephone-based survey data was collected by randomly selecting an adult in a household w/ telephone service (of which 97.5% of households are estimated to have in 2012), whilst the cellphone-based survey data was collected from participating adults who received >=90% of theirs calls through cellphone and who reside in private residences or college housing. Note that there was no direct method of accounting employed for non-telephone coverage.
+
+To incorporate telephone and cellphone survey data together, a weighting methodology called iterative proportional fitting / "raking" was used. This allowed for the sample data to more-accurately match the known demographic characteristics of the population.
+
+For the complete reference on this dataset, please refer to the official [BRFSS 2013 Survey Data and Documentation](https://www.cdc.gov/brfss/annual_data/annual_2013.html)
+
+### Generalizability
+The telephone-based survey appears to be a stratified sample where each household with telephone service is a strata, and the random adult selected is the representative. On the other hand, the cellphone-based survey had no direct method of accounting employed and had an eligibility requirement of having active use of cellphone and living in private and college housing. Whilst BRFSS employed raking in its attempt to have the sample accurately match the population, at the very least, we can only safely generalize to settled adults of 18 years of age or older, in the participating US states and territories, who have household telephone service or have active cellphone use (of >=90% call reception).
+
+### Causality
+BRFSS 2013 was only an observational study without experiments employing random assignment. Therefore, we can only form suggestions of associations. We cannot claim any causality.
 
 * * *
 
