@@ -42,7 +42,7 @@ For the complete reference on this dataset, please refer to the official [BRFSS 
 The telephone-based survey appears to be a stratified sample where each household with telephone service is a strata, and the random adult selected is the representative. On the other hand, the cellphone-based survey had no direct method of accounting employed and had an eligibility requirement of having active use of cellphone and living in private and college housing. Whilst BRFSS employed raking in its attempt to have the sample accurately match the population, at the very least, we can only safely generalize to settled adults of 18 years of age or older, in the participating US states and territories, who have household telephone service or have active cellphone use (of >=90% call reception).
 
 ### Causality
-BRFSS 2013 was only an observational study without experiments employing random assignment. Therefore, we can only form suggestions of associations. We cannot claim any causality.
+BRFSS 2013 was only an observational study without experiments employing random assignment. Therefore, no causality can be formed but only associations.
 
 * * *
 
